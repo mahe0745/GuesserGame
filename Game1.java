@@ -172,9 +172,11 @@ public class Game1 {
         System.out.println("Have a nice day ! Bye");
         System.exit(0);
       }
-      default:
-        System.out.println("Invalid Input! Try again");
-        break;
+      default:{
+           
+            System.out.println("Invalid Input! Try again");
+             break;
+       }
 
       }
     }
