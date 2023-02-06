@@ -140,10 +140,16 @@ public class Game1 {
         }
       }
       case 2: {
-        for (int i = 0; i < p1.length; i++) {
+        if(count1>=1) {
+    	  for (int i = 0; i < p1.length; i++) {
           a.login(p1);
         }
         count++;
+        }
+        else {
+        	System.out.println("Signup first!");
+        	break;
+        }
         System.out.println("Login completed for all the players");
         System.out.println();
         break;
@@ -172,11 +178,10 @@ public class Game1 {
         System.out.println("Have a nice day ! Bye");
         System.exit(0);
       }
-      default:{
-           
-            System.out.println("Invalid Input! Try again");
-             break;
-       }
+      default:
+      { System.out.println("Invalid input!");
+    	  break;
+      }
 
       }
     }
