@@ -72,9 +72,10 @@ class Admin {
 }
 class Umpire1 {
 
-  String[] arr = new String[] {"0","0"};
   int count = 0;
   void compare(Player1[] p1, int n) {
+    String[] arr = new String[p1.length] ;
+	  Arrays.fill(arr, "0");
     for (int i = 0; i < p1.length; i++) {
       if (p1[i].playerGuess(p1, i) == n) {
         arr[i] = p1[i].username;
