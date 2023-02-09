@@ -5,7 +5,7 @@ class Guesser1 {
   int guess() {
     Random r = new Random();
     int n = r.nextInt(10);
-    return n;
+    return 5;
   }
 }
 
@@ -37,7 +37,7 @@ class Player1 {
   }
 }
 class Admin {
-
+  int count1 = 0;
   int count = 0;
   void login(Player1[] p1) {
 
@@ -48,8 +48,6 @@ class Admin {
     String user = sc.nextLine();
     System.out.println("Enter the password:");
     String pass = sc.nextLine();
-    int count = 0;
-    int count1 = 0;
     for (Player1 p: p1) {
       if (user.equalsIgnoreCase(p.username) & pass.equalsIgnoreCase(p.password)) {
         System.out.println("Welcome" + " " + user);
@@ -63,7 +61,8 @@ class Admin {
       if (count1 < 3) {
         System.out.println("Try again");
         login(p1);
-      } else {
+      } 
+      else if(count1>3) {
         System.out.println("Try again after sometime! Bye");
         System.exit(0);
       }
@@ -90,6 +89,7 @@ class Umpire1 {
         System.out.print(p.username + ",");
       }
       System.out.println(" " + "won the game");
+      System.out.println("Game Drawn");
       System.exit(0);
 
     }
